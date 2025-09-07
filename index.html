@@ -18,9 +18,12 @@
   <div class="container">
     <!-- Hero -->
     <div class="profile-card">
-      <button id="darkModeToggle">
-        Dark Mode
-      </button>
+      <!-- <button id="darkModeToggle"> -->
+        <!-- Dark Mode -->
+      <!-- </button> -->
+      <div id="darkModeToggle" class="toggle">
+        <div class="slider"></div>
+      </div>
       <img src="images/mugshot-3.png" alt="Akhil Shelly portrait">
       <h1>Akhil Shelly</h1>
       <p class="tagline">Software Engineer specializing in scalable microservices and cloud solutions</p>
@@ -77,13 +80,13 @@
     }
 
     // Set initial button label
-    updateButtonLabel();
+    //updateButtonLabel();
 
     // Toggle dark mode on click
     toggleBtn.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
       localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
-      updateButtonLabel();
+      //updateButtonLabel();
     });
   </script>
 
