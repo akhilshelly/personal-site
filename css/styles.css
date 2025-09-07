@@ -1,10 +1,35 @@
-/* Base */
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --card-bg: #fff;
+  --accent-blue: #3282e6;
+  --accent-orange: #f08c42;
+  --tagline-color: #555;
+  --skill-bg: #fff;
+  --skill-border: var(--accent-blue);
+  --footer-color: #777;
+  --button-text: #fff;
+}
+
+/* Dark mode variables */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --tagline-color: #ccc;
+  --skill-bg: #2a2a2a;
+  --skill-border: var(--accent-blue);
+  --footer-color: #aaa;
+  --button-text: #fff;
+}
+
+/* Use above variables throughout CSS */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  color: #333;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 .container {
@@ -15,9 +40,31 @@ body {
   text-align: center;
 }
 
+#darkModeToggle {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--accent-blue);
+  color: var(--button-text);
+  font-weight: 500;
+  box-shadow: 0 0 8px 2px rgba(50, 130, 230, 0.5);
+  transition: background 0.2s, box-shadow 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#darkModeToggle:hover {
+  background: var(--accent-orange);
+  box-shadow: 0 0 12px 4px rgba(240, 140, 66, 0.5);
+  transform: translateY(-1px);
+}
+
+
 /* Profile Card */
 .profile-card {
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 12px;
   padding: 40px 30px;
   max-width: 600px;
@@ -35,13 +82,13 @@ h1 {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #3282e6; /* primary blue accent */
+  color: var(--accent-blue);
 }
 
 .tagline {
   font-size: 18px;
   font-weight: 300;
-  color: #555;
+  color: var(--tagline-color);
   margin-bottom: 25px;
 }
 
@@ -49,8 +96,8 @@ h1 {
 .resume-btn {
   display: inline-block;
   padding: 12px 24px;
-  background: #3282e6;
-  color: #fff;
+  background: var(--accent-blue);
+  color: var(--button-text);
   text-decoration: none;
   border-radius: 6px;
   font-weight: 500;
@@ -58,7 +105,7 @@ h1 {
 }
 
 .resume-btn:hover {
-  background: #f08c42; /* secondary orange accent on hover */
+  background: var(--accent-orange);
 }
 
 /* Social Icons */
@@ -68,12 +115,12 @@ h1 {
 
 .socials a {
   margin: 0 12px;
-  color: #555;
+  color: var(--tagline-color);
   transition: color 0.2s ease;
 }
 
 .socials a:hover {
-  color: #f08c42; /* orange hover for contrast */
+  color: var(--accent-orange);
 }
 
 /* About & Skills Sections */
@@ -87,13 +134,14 @@ section h2 {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 15px;
-  color: #3282e6; /* consistent blue accent */
+  color: var(--accent-blue);
+  transition: color 0.3s ease;
 }
 
 .about p {
   font-size: 16px;
   line-height: 1.6;
-  color: #444;
+  color: var(--text-color);
 }
 
 /* Skills */
@@ -105,18 +153,19 @@ section h2 {
 }
 
 .skill {
-  background: #fff;
+  background: var(--skill-bg);
   padding: 10px 18px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   font-size: 15px;
   font-weight: 500;
-  border: 2px solid #3282e6; /* subtle blue outline */
-  transition: background 0.2s, color 0.2s;
+  border: 2px solid var(--skill-border);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .skill:hover {
-  background: #f08c42; /* orange fill on hover */
+  background: var(--accent-orange);
   color: #fff;
 }
 
@@ -124,6 +173,18 @@ section h2 {
 footer {
   text-align: center;
   font-size: 14px;
-  color: #777;
+  color: var(--footer-color);
   margin: 40px 0 20px;
+}
+
+/* Smooth color transitions for dark mode */
+body,
+.profile-card,
+h1,
+.tagline,
+.resume-btn,
+.socials a,
+.skill,
+footer {
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }

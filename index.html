@@ -18,6 +18,9 @@
   <div class="container">
     <!-- Hero -->
     <div class="profile-card">
+      <button id="darkModeToggle">
+        Dark Mode
+      </button>
       <img src="images/mugshot-3.png" alt="Akhil Shelly portrait">
       <h1>Akhil Shelly</h1>
       <p class="tagline">Software Engineer specializing in scalable microservices and cloud solutions</p>
@@ -57,5 +60,32 @@
       <p>&copy; 2025 Akhil Shelly</p>
     </footer>
   </div>
+
+  <!-- Dark mode toggle button -->
+  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Function to update button label
+    function updateButtonLabel() {
+      toggleBtn.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+    }
+
+    // Apply saved preference on load
+    if (localStorage.getItem('darkMode') === 'true') {
+      body.classList.add('dark-mode');
+    }
+
+    // Set initial button label
+    updateButtonLabel();
+
+    // Toggle dark mode on click
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+      updateButtonLabel();
+    });
+  </script>
+
 </body>
 </html>
