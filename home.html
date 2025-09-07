@@ -1,97 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Akhil Shelly</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" >
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style type="text/css">
-  body {
-    /*background: linear-gradient(90deg, white, gray);*/
-    background-color: #eee;
-  }
+  <title>Akhil Shelly | Software Engineer</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" crossorigin="anonymous">
 
-  body, h1, p {
-    font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
 
-  .container {
-    margin-left:  auto;
-    margin-right:  auto;
-    margin-top: 177px;
-    max-width: 1170px;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-  .row:before, .row:after {
-    display: table;
-    content: " ";
-  }
+    .profile-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px 30px;
+      max-width: 600px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+    }
 
-  h1 {
-    font-size: 48px;
-    font-weight: 300;
-    margin: 0 0 20px 0;
-  }
+    .profile-card img {
+      border-radius: 50%;
+      height: 160px;
+      margin-bottom: 20px;
+    }
 
-  .lead {
-    font-size: 21px;
-    font-weight: 200;
-    margin-bottom: 20px;
-  }
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
 
-  .mainP {
-    margin: 0 0 10px;
-  }
+    .tagline {
+      font-size: 18px;
+      font-weight: 300;
+      color: #555;
+      margin-bottom: 25px;
+    }
 
-  a {
-    color: #3282e6;
-    text-decoration: none;
-  }
+    .resume-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #3282e6;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
 
-  .footer {
-    bottom: 0; 
-    position: fixed; 
-    text-align: center; 
-    width: 100%; 
-    margin-bottom: 10px;
-  }
+    .resume-btn:hover {
+      background: #1e63c6;
+    }
 
-  .roundImage {
-    border-radius: 50%;
-  }
+    .socials {
+      margin-top: 30px;
+    }
 
+    .socials a {
+      margin: 0 12px;
+      color: #555;
+      transition: color 0.2s ease;
+    }
+
+    .socials a:hover {
+      color: #3282e6;
+    }
+
+    /* About & Skills Sections */
+    section {
+      max-width: 800px;
+      margin-bottom: 50px;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .skill {
+      background: #fff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin: 40px 0 20px;
+    }
   </style>
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 </head>
-
 <body>
-<div class="container text-center" id="error">
-
-  <img src="images/mugshot-2.png" height="200" class="roundImage">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="main-icon text-success"><span class="uxicon uxicon-clock-refresh"></span></div>
-      <h1>Akhil Shelly - Software Engineer</h1>
-      <p class="lead mainP">Hi there! I will be adding some cool stuff to this page in the near future.</p>
-      <p class="lead mainP">In the meantime, check out my <a href="resume/resume.pdf">resume</a>.</p>
+  <div class="container">
+    <!-- Hero -->
+    <div class="profile-card">
+      <img src="images/mugshot-3.png" alt="Akhil Shelly portrait">
+      <h1>Akhil Shelly</h1>
+      <p class="tagline">Software Engineer specializing in scalable microservices and cloud solutions</p>
+      <a href="resume/resume.pdf" class="resume-btn">View Resume</a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/akhilshelly"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://github.com/akhilshelly"><i class="fab fa-github-square fa-lg"></i></a>
+      </div>
     </div>
+
+    <!-- About -->
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        With over 15 years of experience as a Java developer, I specialize in building efficient, 
+        scalable solutions across industries such as healthcare, finance, and broadcast. 
+        I thrive on transforming ambiguous requirements into production-ready systems, 
+        mentoring teams, and delivering under tight deadlines.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+      <h2>Core Skills</h2>
+      <div class="skills-list">
+        <div class="skill">Java/Spring Boot</div>
+        <div class="skill">Microservices</div>
+        <div class="skill">Cloud Solutions</div>
+        <div class="skill">Team Leadership</div>
+        <div class="skill">Agile Delivery</div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Akhil Shelly</p>
+    </footer>
   </div>
-
-</div>
-
-<footer class="footer">
-  <p>
-    <a href="https://www.linkedin.com/in/akhilshelly"><i class="fab fa-linkedin fa-lg"></i></a>
-    <a href="https://github.com/akhilshelly"><i class="fab fa-github-square fa-lg"></i></a>
-  </p>
-  <p>&copy Akhil Shelly</p>
-</footer>
-
 </body>
 </html>
