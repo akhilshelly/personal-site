@@ -18,11 +18,11 @@
   <div class="container">
     <!-- Hero -->
     <div class="profile-card">
-      <!-- <button id="darkModeToggle"> -->
-        <!-- Dark Mode -->
-      <!-- </button> -->
-      <div id="darkModeToggle" class="toggle">
-        <div class="slider"></div>
+      <div id="darkModeToggle" class="toggle" role="switch" aria-checked="false" tabindex="0">
+        <div class="knob">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </div>
       </div>
       <img src="images/mugshot-3.png" alt="Akhil Shelly portrait">
       <h1>Akhil Shelly</h1>
@@ -67,26 +67,27 @@
   <!-- Dark mode toggle button -->
   <script>
     const toggleBtn = document.getElementById('darkModeToggle');
+    const toggleIcon = toggleBtn.querySelector('.knob i');
     const body = document.body;
-
-    // Function to update button label
-    function updateButtonLabel() {
-      toggleBtn.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
-    }
 
     // Apply saved preference on load
     if (localStorage.getItem('darkMode') === 'true') {
       body.classList.add('dark-mode');
     }
 
-    // Set initial button label
-    //updateButtonLabel();
-
     // Toggle dark mode on click
     toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
-      //updateButtonLabel();
+      const isDark = body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+      toggleBtn.setAttribute('aria-checked', isDark);
+    });
+
+    // Support keyboard navigation
+    toggleBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleBtn.click();
+      }
     });
   </script>
 
