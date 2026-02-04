@@ -75,7 +75,7 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 Akhil Shelly</p>
+      <p>&copy; <span id="year"></span> Akhil Shelly • Building since 2009</p>
     </footer>
   </div>
 
@@ -104,6 +104,8 @@
         toggleBtn.click();
       }
     });
+
+    document.getElementById("year").innerHTML = new Date().getFullYear();
   </script>
 
 </body>
