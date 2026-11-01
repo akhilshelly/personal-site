@@ -4,109 +4,198 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Akhil Shelly | Software Engineer</title>
+  <title>Akhil Shelly | Senior Engineering Lead & Solution Architect</title>
 
-  <meta name="description" content="Akhil Shelly, experienced Java developer specializing in scalable solutions, microservices, and team leadership.">
+  <meta name="description" content="Akhil Shelly — Senior Engineering Leader and Solution Architect with 17+ years architecting scalable enterprise systems, distributed cloud platforms, and leading engineering delivery.">
 
-  <!-- Basic Open Graph tags -->
-  <meta property="og:title" content="Akhil Shelly – Software Engineer">
-  <meta property="og:description" content="Crafting efficient, scalable solutions with 15+ years of experience in Java development.">
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Akhil Shelly – Senior Engineering Lead & Solution Architect">
+  <meta property="og:description" content="Architecting resilient distributed systems, enterprise platforms, and leading high-velocity engineering delivery.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://akhilshelly.com/">
-  <meta property="og:image" content="https://akhilshelly.com/images/mugshot-3.jpg">
+  <meta property="og:image" content="https://akhilshelly.com/images/mugshot-3.png">
   <meta property="og:site_name" content="Akhil Shelly">
-  
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Typography: Inter Tight / Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" crossorigin="anonymous">
 
-  <!-- local styles -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- favicon -->
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.png" type="image/png">
-
 </head>
 <body>
-  <div class="container">
-    <!-- Hero -->
-    <div class="profile-card">
-      <div id="darkModeToggle" class="toggle" role="switch" aria-checked="false" tabindex="0">
-        <div class="knob">
-          <i class="fas fa-moon"></i>
-          <i class="fas fa-sun"></i>
+  <!-- Ambient Glow Canvas Layer -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <div class="page-wrapper">
+    <!-- Header / Nav -->
+    <header class="site-header">
+      <div class="brand">
+        <span class="monogram">AS</span>
+        <span class="status-indicator">
+          <span class="status-dot"></span> Available for Architecture Advisory
+        </span>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button id="darkModeToggle" class="theme-toggle" role="switch" aria-label="Toggle visual theme" aria-checked="false" tabindex="0">
+        <span class="toggle-track">
+          <span class="toggle-thumb">
+            <i class="fas fa-moon moon-icon"></i>
+            <i class="fas fa-sun sun-icon"></i>
+          </span>
+        </span>
+      </button>
+    </header>
+
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-card">
+        <div class="profile-meta">
+          <div class="avatar-frame">
+            <picture>
+              <source srcset="images/mugshot-3.webp" type="image/webp">
+              <img src="images/mugshot-3.png" alt="Akhil Shelly" class="avatar-img" width="130" height="130">
+            </picture>
+            <div class="avatar-ring"></div>
+          </div>
+          <div class="hero-text">
+            <div class="eyebrow-tag">
+              <span class="tag-code">TORONTO, CANADA</span>
+              <span class="tag-divider">•</span>
+              <span class="tag-code">17+ YEARS EXPERIENCE</span>
+            </div>
+            <h1 class="hero-name">Akhil Shelly</h1>
+            <p class="hero-role">Senior Engineering Lead &amp; Solution Architect</p>
+          </div>
         </div>
-      </div>
-      <img src="images/mugshot-3.png" alt="Akhil Shelly - Software Engineer">
-      <h1>Akhil Shelly</h1>
-      <p class="tagline">Software Engineer specializing in scalable microservices and cloud solutions</p>
-      <a href="files/resume.pdf" class="resume-btn">View Resume</a>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/akhilshelly"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a href="https://github.com/akhilshelly"><i class="fab fa-github-square fa-lg"></i></a>
-      </div>
-    </div>
 
-    <!-- About -->
-    <section class="about">
-      <h2>About Me</h2>
-      <p>
-        With over 15 years of experience as a Java developer, I specialize in building efficient, 
-        scalable solutions across industries such as healthcare, finance, and broadcast. 
-        I thrive on transforming ambiguous requirements into production-ready systems, 
-        mentoring teams, and delivering under tight deadlines.
-      </p>
-    </section>
+        <p class="hero-summary">
+          Architecting resilient distributed systems, enterprise platforms, and high-velocity engineering teams. 
+          Transforming complex regulatory constraints into scalable, fault-tolerant software architectures across finance, healthcare, and enterprise broadcast.
+        </p>
 
-    <!-- Skills -->
-    <section class="skills">
-      <h2>Core Skills</h2>
-      <div class="skills-list">
-        <div class="skill">Java/Spring Boot</div>
-        <div class="skill">Microservices</div>
-        <div class="skill">Solution Architecture</div>
-        <div class="skill">Cloud Solutions</div>
-        <div class="skill">Team Leadership</div>
-        <div class="skill">Agile Delivery</div>
-      </div>
-    </section>
+        <div class="action-row">
+          <a href="files/resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">
+            <span>View Full Resume</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/akhilshelly" target="_blank" rel="noopener" aria-label="LinkedIn Profile" class="social-btn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/akhilshelly" target="_blank" rel="noopener" aria-label="GitHub Profile" class="social-btn">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architectural Pillars Grid -->
+      <section class="section-container">
+        <div class="section-header">
+          <span class="section-label">01 // DOMAINS</span>
+          <h2 class="section-title">Architectural Expertise</h2>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fas fa-cubes"></i></div>
+            <h3 class="pillar-heading">Distributed Systems</h3>
+            <p class="pillar-description">
+              Event-driven microservices, high-throughput JVM applications, message-driven pipelines, and transactional consistency in high-concurrency systems.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fas fa-cloud"></i></div>
+            <h3 class="pillar-heading">Cloud &amp; Platform Architecture</h3>
+            <p class="pillar-description">
+              Multi-cloud integration, container orchestration, zero-downtime deployment pipelines, resilient API gateway design, and strict infrastructure telemetry.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fas fa-users-cog"></i></div>
+            <h3 class="pillar-heading">Engineering Leadership</h3>
+            <p class="pillar-description">
+              Bridging executive strategy with production code. Mentoring cross-functional delivery squads, technical hiring, and driving rigorous engineering standards.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Competency Stack -->
+      <section class="section-container">
+        <div class="section-header">
+          <span class="section-label">02 // ARTIFACTS</span>
+          <h2 class="section-title">Core Competencies</h2>
+        </div>
+
+        <div class="skills-cluster">
+          <span class="skill-chip">Java / Spring Boot</span>
+          <span class="skill-chip">Distributed Microservices</span>
+          <span class="skill-chip">Enterprise Architecture</span>
+          <span class="skill-chip">Cloud Solutions</span>
+          <span class="skill-chip">Team Leadership &amp; Mentorship</span>
+          <span class="skill-chip">Agile / Cross-Functional Delivery</span>
+          <span class="skill-chip">High-Concurrency API Design</span>
+          <span class="skill-chip">Data Decoupling &amp; Governance</span>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-      <p>&copy; <span id="year"></span> Akhil Shelly • Building since 2009</p>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="copyright">&copy; <span id="year"></span> Akhil Shelly • Building since 2009</p>
+        <p class="colophon">Engineered with vanilla craft • Zero build dependencies</p>
+      </div>
     </footer>
   </div>
 
-  <!-- Dark mode toggle button -->
+  <!-- Theme Script (Zero-Flicker & Persistent) -->
   <script>
-    const toggleBtn = document.getElementById('darkModeToggle');
-    const toggleIcon = toggleBtn.querySelector('.knob i');
-    const body = document.body;
+    (function() {
+      const toggleBtn = document.getElementById('darkModeToggle');
+      const body = document.body;
 
-    // Apply saved preference on load
-    if (localStorage.getItem('darkMode') === 'true') {
-      body.classList.add('dark-mode');
-    }
-
-    // Toggle dark mode on click
-    toggleBtn.addEventListener('click', () => {
-      const isDark = body.classList.toggle('dark-mode');
-      localStorage.setItem('darkMode', isDark);
-      toggleBtn.setAttribute('aria-checked', isDark);
-    });
-
-    // Support keyboard navigation
-    toggleBtn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggleBtn.click();
+      // Apply saved preference or system preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        body.classList.add('dark-mode');
+        toggleBtn.setAttribute('aria-checked', 'true');
+      } else {
+        body.classList.remove('dark-mode');
+        toggleBtn.setAttribute('aria-checked', 'false');
       }
-    });
 
-    document.getElementById("year").innerHTML = new Date().getFullYear();
+      // Handle click
+      toggleBtn.addEventListener('click', () => {
+        const isDark = body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        toggleBtn.setAttribute('aria-checked', isDark.toString());
+      });
+
+      // Handle keyboard accessibility
+      toggleBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleBtn.click();
+        }
+      });
+
+      // Dynamic year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
   </script>
-
 </body>
 </html>
