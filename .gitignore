@@ -1,0 +1,4 @@
+# Personal site local dev ignores
+AGENTS.md
+.DS_Store
+*.swp
